@@ -14,10 +14,15 @@ public class HomePageTest extends WebAPI {
     public void getInIt(){
         myHomePage= PageFactory.initElements(driver, HomePage.class);
     }
+
     @Test
     public void testingSearchBoxIsDisplayed() throws InterruptedException {
         myHomePage.searchBoxIsDisplayed();
     }
 
+    @Test
+    public void testingSearchBoxIsClickable() throws InterruptedException {
+        myHomePage.searchBoxIsClickable("candle");
+    }
 
 }

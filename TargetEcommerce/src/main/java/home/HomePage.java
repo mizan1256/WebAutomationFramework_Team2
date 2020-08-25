@@ -8,20 +8,30 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.testng.Assert;
 
-import static home.HomePageWebElement.searchBoxByXpath;
+import static home.HomePageWebElement.*;
 
 public class HomePage extends WebAPI {
-    @FindBy (how = How.XPATH, using = searchBoxByXpath)
+    @FindBy(how = How.XPATH, using = searchBoxByXpath)
     public WebElement searchBox;
 
-    public void searchBoxIsDisplayed() throws InterruptedException {
+    @FindBy(how = How.XPATH, using = searchLogoButtonByXpath)
+    public WebElement searchLogoButton;
 
+    public void searchBoxIsDisplayed() throws InterruptedException {// case# 1
         searchBox.isDisplayed();
-      //  System.out.println(driver.getTitle());
-//        Thread.sleep(2000);
-       // Assert.assertTrue(driver.findElement(By.className("//*[@id=\"header\"]/div[1]/div[2]/div/div[1]/ul/li[1]/a")).isDisplayed());
-        Assert.assertEquals("Target : Expect More. Pay Less.",driver.getTitle());
-        Thread.sleep(2000);
+
+            Assert.assertEquals("Target : Expect More. Pay Less.", driver.getTitle());
+            Thread.sleep(2000);
+        }
+        public void searchBoxIsClickable (String searchItem) throws InterruptedException {
+            Thread.sleep(2000);
+            searchBox.sendKeys("candle");
+            Thread.sleep(2000);
+            searchLogoButton.click();
+            //Assert.assertEquals("Target : Expect More. Pay Less.", driver.getTitle());
+            //Thread.sleep(2000);
+        }
     }
 
-}
+
+
