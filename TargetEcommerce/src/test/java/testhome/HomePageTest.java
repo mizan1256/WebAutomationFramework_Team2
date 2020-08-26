@@ -12,6 +12,7 @@ public class HomePageTest extends WebAPI {
     @BeforeMethod
     public void getInit(){
         homePage = PageFactory.initElements(driver,HomePage.class);
+
     }
     @Test
     public void testSearchBoxIsDisplayed(){
@@ -25,5 +26,15 @@ public class HomePageTest extends WebAPI {
     @Test
     public void testTargetLogoIsDisplayed(){
         homePage.targetLogoIsDisplayed();
+    }
+    @Test
+    public void testDisposableMaskIsDisplayed() throws InterruptedException {
+        homePage.disposableMaskIsDisplayed("Face Masks");
+        homePage.validateFaceMasks();
+    }
+    @Test
+    public void testClearanceImage() throws InterruptedException {
+        homePage.clearanceImage();
+        homePage.validateClearanceImage();
     }
 }
