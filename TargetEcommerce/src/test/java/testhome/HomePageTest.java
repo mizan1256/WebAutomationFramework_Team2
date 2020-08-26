@@ -31,5 +31,9 @@ public class HomePageTest extends WebAPI {
         myHomePage.searchingForProduct_Method("headphones");
         myHomePage.validating_SearchingForProduct_Method();
     }
+    @Test
+    public void testing_dealsTarget() throws InterruptedException {
+        myHomePage.dealsTarget();
+    }
 
 }

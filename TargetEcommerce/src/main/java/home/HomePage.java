@@ -6,6 +6,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindAll;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
+import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.Sleeper;
 import org.testng.Assert;
 
 import java.sql.SQLOutput;
@@ -21,11 +23,22 @@ public class HomePage extends WebAPI {
 
     @FindBy(how = How.ID, using = searchForProductById)
     public WebElement searchProduct;
+
     @FindBy(how = How.XPATH, using = searchForProductByXpath_Actual)
     public WebElement actualText;
 
-//    @FindBy(how = How.XPATH, using = searchForProduct_Expected)
-//    public WebElement expectedItemByXpath;
+    @FindBy(how = How.XPATH, using = dealsTargetHomePageByXpath)
+    public WebElement deals;
+
+    @FindBy(how = How.XPATH,using = dealsTarget_TopDealsByXpath)
+    public WebElement topDeals;
+
+    public void dealsTarget() throws InterruptedException {
+        Thread.sleep(2000);
+    deals.click();
+    Thread.sleep(2000);
+    topDeals.click();
+}
 
     public void searchBoxIsDisplayed() throws InterruptedException {// case# 1
         searchBox.isDisplayed();
