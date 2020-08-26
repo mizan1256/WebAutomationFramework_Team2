@@ -1,7 +1,7 @@
 package testGiftCardHome;
 
 import common.WebAPI;
-import giftCard.GiftCardPage;
+import giftcard.GiftCardPage;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -35,5 +35,19 @@ public class GiftCardPageTest extends WebAPI {
     public void testGcpShiptButtonIsClickable() throws InterruptedException {
          giftCardPage.gcpShiptButtonIsClickable();
         giftCardPage.validateGcpShiptButtonIsClickable();
+    }
+    @Test
+    public void testGcpGiftCardForSchShoBagLogoIsDisplay(){
+         giftCardPage.gcpGiftCardForSchShoBagLogoIsDisplay();
+    }
+    @Test
+    public void testGcpGiftCardForSchoolShoppingBagLogo() throws InterruptedException {
+        giftCardPage.gcpGiftCardForSchoolShoppingBagLogo();
+        giftCardPage.validateGcpGiftCardForSchoolShoppingBagLogo();
+    }
+    @Test
+    public void tsetGcpGiftForSchoolChooseOption() throws InterruptedException {
+         giftCardPage.gcpGiftForSchoolChooseOption();
+         giftCardPage.validateGcpGiftForSchoolChooseOption();
     }
 }

@@ -9,6 +9,7 @@
         <classes>
             <class name="testhome.HomePageTest"></class>
             <class name="testGiftCardHome.GiftCardPageTest"></class>
+            <class name="testweeklyad.WeeklyAdTest"></class>
 <!--            <class name="testhome.RegistrationPageTest"></class>-->
         </classes>
     </test>
