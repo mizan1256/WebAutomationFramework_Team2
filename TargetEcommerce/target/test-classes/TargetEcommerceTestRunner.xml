@@ -4,16 +4,18 @@
 
 <suite name="TargetEcommerce Automation Test" parallel="false">
     <parameter name="url" value="https://www.target.com/"/>
-
     <test name="TargetEcommerce Home">
+
         <classes>
             <class name="testhome.HomePageTest"></class>
             <class name="testGiftCardHome.GiftCardPageTest"></class>
             <class name="testweeklyad.WeeklyAdTest"></class>
-<!--            <class name="testhome.RegistrationPageTest"></class>-->
+            <class name="testShoppingCart.ShoppingCartTest"></class>
+
         </classes>
     </test>
 
-
 </suite>
+
+
 

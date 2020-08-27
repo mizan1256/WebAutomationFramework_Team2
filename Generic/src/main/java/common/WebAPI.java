@@ -21,9 +21,11 @@ public class WebAPI {
 
     @Parameters({"url"})
 
+
     @BeforeMethod
-   // public void setUp(@Optional("https://www.google.com") String url){
-        public void setUp(@Optional("https://www.target.com") String url){
+   public void setUp(@Optional("https://www.google.com") String url){
+        // public void setUp(@Optional("https://www.target.com") String url){
+        //public void setUp(@Optional("https://www.cnn.com") String url){
         System.setProperty("webdriver.chrome.driver", "../Generic/BrowserDriver/Mac/chromedriver");
         driver = new ChromeDriver();
         driver.get(url);
@@ -31,6 +33,7 @@ public class WebAPI {
         driver.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);
         driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);
     }
+
 
     @AfterMethod(alwaysRun = true)
     public void cleanUp() {

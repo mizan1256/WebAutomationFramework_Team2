@@ -24,5 +24,23 @@ public class HomePageTest extends WebAPI {
     public void testserchBoxIsDisplayed(){
         homePage.serchBoxIsDisplayed();
     }
-
+    @Test
+    public void testCreateTargetAccount() throws InterruptedException {
+        homePage.createTargetAccount();
+    }
+    @Test
+    public void testCreateTargetAccountForNegativeTest() throws InterruptedException {
+        homePage.createTargetAccountForNegativeTest();
+        homePage.validateCreateTargetAccountForNegativeTest();
+    }
+    @Test
+    public void testSignInTargerUserAccount(){
+        homePage.signInTargerUserAccount();
+        homePage.validateSignInTargerUserAccount();
+    }
+    @Test
+    public void testSignInTargerUserAccountUsingInvalidCredentials() throws InterruptedException {
+        homePage.signInTargerUserAccountUsingInvalidCredentials();
+        homePage.validateSignInTargetUserAccountUsingInvalidCredentials();
+    }
 }

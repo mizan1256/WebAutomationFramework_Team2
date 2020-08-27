@@ -23,6 +23,7 @@ public class GiftCardPage extends WebAPI {
     public void giftCardButtonCheck(){
         giftCardButton.click();
     }
+
     public void validateGiftCardButtonCheck() throws InterruptedException {
         Thread.sleep(3000);
         String actualResult=headerGiftCardPage.getText();
@@ -34,6 +35,7 @@ public class GiftCardPage extends WebAPI {
         giftCardButtonCheck();
         System.out.println("Test case's Image displayed: "+gcpShiptImage.isDisplayed());
     }
+
     public void gcpShiptImageIsClickAble(){
         giftCardButton.click();
         gcpShiptImage.click();
@@ -42,11 +44,13 @@ public class GiftCardPage extends WebAPI {
         Thread.sleep(3000);
         Assert.assertEquals("Shipt Membership Giftcard (Email Delivery) : Target",driver.getTitle());
     }
+
     public void gcpShiptButtonIsDisplay() throws InterruptedException {
         giftCardButtonCheck();
         Thread.sleep(3000);
         System.out.println("Shipt Button displayed: "+gcpShiptButton.isDisplayed());
     }
+
     public void gcpShiptButtonIsClickable() throws InterruptedException {
         giftCardButtonCheck();
         Thread.sleep(3000);
@@ -59,11 +63,13 @@ public class GiftCardPage extends WebAPI {
         System.out.println(actualResult);
         Assert.assertEquals(actualResult,expectedResult,"Text do not match");
     }
+
     public void gcpGiftCardForSchShoBagLogoIsDisplay(){
         giftCardButtonCheck();
         gcpGiftForScLogo.isDisplayed();
         System.out.println("Gift card for school logo is displayed : "+gcpGiftForScLogo.isDisplayed());
     }
+
     public void gcpGiftCardForSchoolShoppingBagLogo() throws InterruptedException {
         giftCardButtonCheck();
         Thread.sleep(5000);
@@ -76,6 +82,7 @@ public class GiftCardPage extends WebAPI {
         Thread.sleep(3000);
         Assert.assertEquals("Gift Cards : Target",driver.getTitle());
     }
+
     public void gcpGiftForSchoolChooseOption() throws InterruptedException {
         giftCardButtonCheck();
         gcpGiftCardForSchoolShoppingBagLogo();
