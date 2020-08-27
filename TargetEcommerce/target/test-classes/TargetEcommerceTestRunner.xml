@@ -8,6 +8,8 @@
     <test name="Target Ecommerce Home">
         <classes>
             <class name="testhome.HomePageTest"></class>
+            <class name="testfindstore.StorePageTest"></class>
+
 <!--            <class name="testhome.RegistrationPageTest"></class>-->
         </classes>
     </test>
