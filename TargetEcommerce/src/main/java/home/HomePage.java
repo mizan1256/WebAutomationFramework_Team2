@@ -7,8 +7,6 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.testng.Assert;
 
-import java.security.PublicKey;
-
 import static home.HomePagewebElements.*;
 
 public class HomePage extends WebAPI {

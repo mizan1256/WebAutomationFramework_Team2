@@ -7,7 +7,7 @@
 
     <test name="TargetEcommerce Home">
         <classes>
-            <class name="testhome.HomePageTest"></class>
+            <class name="testhome.testHomePage.HomePageTest"></class>
             <class name="testRegistry.RegistryHomePageTest"></class>
         </classes>
     </test>

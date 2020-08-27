@@ -18,7 +18,6 @@ public class RegistryHomePageTest extends WebAPI {
     public void getInit(){
         registryPage = PageFactory.initElements(driver,RegistryHomePage.class);
     }
-
     @Test
     public void testLogoIsDisplayed(){
         registryPage.logoIsDisplayed();
