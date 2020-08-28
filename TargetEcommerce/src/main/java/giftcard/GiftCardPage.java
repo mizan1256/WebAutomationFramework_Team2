@@ -9,15 +9,28 @@ import org.testng.Assert;
 import static giftcard.GiftCardWebElements.*;
 
 public class GiftCardPage extends WebAPI {
-    @FindBy(xpath = "//a[@class='Link-sc-1khjl8b-0 kPdxNk'][contains(text(),'Gift Cards')]") WebElement giftCardButton;
-    @FindBy(xpath = "//h1[@class='Heading__StyledHeading-sc-1m9kw5a-0 jAsGMN h-margin-b-none']") WebElement headerGiftCardPage;
-    @FindBy(xpath = "//div[@class='StorycardContainer-lejxwe-0 dvzoVo storycard']//img") WebElement gcpShiptImage;
-    @FindBy(xpath = "//span[contains(text(),'Shipt Membership Giftcard (Email Delivery)')]") WebElement gcpHeaderShiptImageDisplay;
-    @FindBy(how = How.XPATH, using =webElementShiptButton) public WebElement gcpShiptButton;
-    @FindBy(how = How.XPATH, using =webElementShiptButtonClickable) public WebElement gcpShiptButtonClickable;
-    @FindBy(how = How.XPATH, using = webElementgcpGiftCardForSchoolShoppingBagLogo) public WebElement gcpGiftForScLogo;
-    @FindBy(how = How.XPATH, using = giftForSchoolChooseOptionButton) public WebElement gcpChooseOption;
-    @FindBy(how =How.XPATH, using = backToClassGiftCard) public WebElement gcpBackToClass;
+    @FindBy(xpath = "//a[@class='Link-sc-1khjl8b-0 kPdxNk'][contains(text(),'Gift Cards')]")
+    WebElement giftCardButton;
+
+    @FindBy(xpath = "//h1[@class='Heading__StyledHeading-sc-1m9kw5a-0 jAsGMN h-margin-b-none']")
+    WebElement headerGiftCardPage;
+
+    @FindBy(xpath = "//div[@class='StorycardContainer-lejxwe-0 dvzoVo storycard']//img")
+    WebElement gcpShiptImage;
+
+    @FindBy(xpath = "//span[contains(text(),'Shipt Membership Giftcard (Email Delivery)')]")
+    WebElement gcpHeaderShiptImageDisplay;
+
+    @FindBy(how = How.XPATH, using =webElementShiptButton)
+    public WebElement gcpShiptButton;
+    @FindBy(how = How.XPATH, using =webElementShiptButtonClickable)
+    public WebElement gcpShiptButtonClickable;
+    @FindBy(how = How.XPATH, using = webElementgcpGiftCardForSchoolShoppingBagLogo)
+    public WebElement gcpGiftForScLogo;
+    @FindBy(how = How.XPATH, using = giftForSchoolChooseOptionButton)
+    public WebElement gcpChooseOption;
+    @FindBy(how =How.XPATH, using = backToClassGiftCard)
+    public WebElement gcpBackToClass;
 
 
     public void giftCardButtonCheck(){

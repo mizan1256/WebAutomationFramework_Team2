@@ -12,9 +12,24 @@ public class CnnHomePageTest extends WebAPI {
     public void getInIt(){
         cnnHomePage = PageFactory.initElements(driver, CnnHomePage.class);
     }
-@Test
+    @Test
     public void testCnnLogoIsDisplay(){
         cnnHomePage.cnnLogoIsDisplay();
+    }
+    @Test
+    public void testCnnLogInIconIsClickable(){
+        cnnHomePage.cnnLogInIconIsClickable();
+        cnnHomePage.validateCnnLogInIconIsClickable();
+    }
+    @Test
+    public void testCnnSearchIconIsClickable(){
+        cnnHomePage.cnnSearchIconIsClickable();
+        cnnHomePage.validateCnnSearchIconIsClickable();
+    }
+    @Test
+    public void testCnnSearchBoxTypeAble() throws InterruptedException {
+        cnnHomePage.cnnSearchBoxTypeAble();
+        cnnHomePage.validateCNNSearchBoxTypeAble();
     }
 
 }

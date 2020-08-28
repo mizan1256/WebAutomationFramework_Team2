@@ -44,7 +44,7 @@ public class HomePage extends WebAPI {
         searchField.sendKeys(searchItem);
         searchFieldButton.click();
     }
-    //Validate Method
+    //Validation Method
     public void validateSeachText() throws InterruptedException {
         Thread.sleep(3000);
         String actualResult=headerIPhone.getText();
@@ -86,9 +86,11 @@ public class HomePage extends WebAPI {
         signInPassword.sendKeys("Tasmi1256");
         finalSignIn.click();
     }
-    public void validateSignInTargerUserAccount(){
+    public void validateSignInTargerUserAccount() {
         Assert.assertEquals("Target Login",driver.getTitle());
     }
+
+
     public void signInTargerUserAccountUsingInvalidCredentials() throws InterruptedException {
         signInButton.click();
         Thread.sleep(3000);

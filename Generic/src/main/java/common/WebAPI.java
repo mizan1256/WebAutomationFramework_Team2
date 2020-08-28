@@ -24,8 +24,8 @@ public class WebAPI {
 
     @BeforeMethod
    public void setUp(@Optional("https://www.google.com") String url){
-        // public void setUp(@Optional("https://www.target.com") String url){
-        //public void setUp(@Optional("https://www.cnn.com") String url){
+       //  public void setUp(@Optional("https://www.target.com") String url){
+      //  public void setUp(@Optional("https://www.cnn.com") String url){
         System.setProperty("webdriver.chrome.driver", "../Generic/BrowserDriver/Mac/chromedriver");
         driver = new ChromeDriver();
         driver.get(url);
