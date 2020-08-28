@@ -15,7 +15,23 @@ public class HomePageWebElement {
     public static final String heartLogoByXpath="//div[@class='h-display-inline-block h-margin-r-tiny']//div[@class='sc-AxhCb eSwYtm']//*[local-name()='svg']";//6
 
     public static final String cartLogoByXpath="//span[@class='sc-AxjAm hhuVxr']//div[@class='sc-AxiKw eSbheu']";//7
-    //public static final String helpButtonInsideCartByXpath="//button[@class='Button-bwu3xu-0 gjynXd h-margin-v-tight h-margin-r-tight']";//7
-    public static final String  expected_helpByXpath="//span[contains(text(),'Have an account? Sign in to see your cart')]";
+    public static final String  expected_helpByXpath="//span[contains(text(),'Have an account? Sign in to see your cart')]";//7
+//8 on findstore class
+    //#9
+    public static final String signInTarget="//span[@class='styles__AccountName-sc-1kk0q5l-0 gIhNhN']";//byxpath//9
+    public static final String signInTextFromList="//div[contains(text(),'Sign in')]";//byxpath////9
+    public static final String emailBox="//input[@id='username']";//byxpath///9
+    public static final String passwordBox="//input[@id='password']";//byxpath///9
+    public static final String signInButtonTarget ="//button[@id='login']";//byxpath//9
+    public static final String jonyUnderSignIn="//span[@class='styles__AccountName-sc-1kk0q5l-0 gIhNhN']";//xpath
+//#10
 
-        }
+    public static final String createAccountTextFromList="//div[contains(text(),'Create account')]";//byxpath.....10
+    public static final String firstNameBox="//input[@id='firstname']";//byxpath
+    public static final String lastNameBox ="//input[@id='lastname']";//byxpath
+    public static final String mobileNumberBox="//input[@id='phone']";//byxpath
+    public static final String verifyYourPageText="//h1[@class='sc-lkqHmb PaqLm']";//xpath......10
+    public static final String createYourAccountButton ="//button[@id='createAccount']";//byxpath....10
+
+    public static final String erorMessageForNegativeTest="//div[@class='sc-fAjcbJ bKqnDO']";//xpath....11
+}

@@ -31,25 +31,45 @@ public class HomePageTest extends WebAPI {
         myHomePage.searchingForProduct_Method("headphones");
         myHomePage.validating_SearchingForProduct_Method();
     }
-    @Test
+    @Test//4
     public void testing_dealsTarget() throws InterruptedException {//4
         myHomePage.dealsTarget();
         myHomePage.validate_DealsTarget();
     }
-    @Test
+    @Test//5
     public void testing_Validate_sameDayDeliveryTarget_Method() throws InterruptedException {//5
         myHomePage.sameDayDeliveryTarget_Method();
         myHomePage.validate_sameDayDeliveryTarget_Method();
     }
-    @Test
+    @Test//6
     public void testing_validate_heartLogoFavorite_Method() throws InterruptedException {//6
         myHomePage.heartLogoFavorite_Method();
         myHomePage.validate_heartLogoFavorite_Method();
     }
-    @Test
+    @Test//7
     public void testing_validate_cartLogo_method() throws InterruptedException {//7
         myHomePage.cartLogo_method();
         myHomePage.validate_cartLogo_method();
     }
+    @Test//# 9
+    public void testing_signInMethod() throws InterruptedException {//...9
+        myHomePage.signInMethod();
+       myHomePage.validate_cartLogo_method();
+    }
+    @Test//#10
+    public void testing_ValidateCreateAccountMethod() throws InterruptedException {
+        myHomePage.createAccountMethod();
+        myHomePage.validateCreateAccountMethod();
+    }
+    @Test//#11
+    public void testing_ValidateCreateAccountMethod_NegativeTest() throws InterruptedException {
+        myHomePage.createAccountMethod_NegativeTest();
+        myHomePage.validateCreateAccountMethod_NegativeTest();
+    }
+
+
 
 }
+
+
+
