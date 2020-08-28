@@ -20,4 +20,9 @@ public class TestRagistration extends WebAPI {
     public void testCnnZipCodeButton(){
         registrationPage.cnnZipCodeBox();
     }
+    @Test
+    public void testCnnAccountLogIn() throws InterruptedException {
+        registrationPage.cnnAccountLogIn();
+        registrationPage.validateCnnAccountLogIn();
+    }
 }

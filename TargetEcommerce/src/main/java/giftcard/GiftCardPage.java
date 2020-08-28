@@ -34,6 +34,7 @@ public class GiftCardPage extends WebAPI {
 
 
     public void giftCardButtonCheck(){
+
         giftCardButton.click();
     }
 

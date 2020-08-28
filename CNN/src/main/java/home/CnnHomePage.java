@@ -48,7 +48,6 @@ public class CnnHomePage extends WebAPI {
         Assert.assertTrue(cnnSearchBox.isDisplayed());
         //System.out.println("Cnn Search Box is displayed :  "+cnnSearchBox.isDisplayed());
     }
-
     //Action Method
     public void cnnSearchBoxTypeAble() throws InterruptedException {
         cnnSearchIconIsClickable();
@@ -56,9 +55,6 @@ public class CnnHomePage extends WebAPI {
         cnnSearchBox.sendKeys("Sports");
         cnnSearchBox.sendKeys(Keys.ENTER);
         Thread.sleep(3000);
-       // cnnSearchBoxTextIcon.submit();
-        //WebDriverWait webDriverWait=new WebDriverWait(driver,7);
-        //webDriverWait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@class='Text-sc-1amvtpj-0 iEWJSI']"))).click();
     }
     //Validation Method
     public void validateCNNSearchBoxTypeAble(){
