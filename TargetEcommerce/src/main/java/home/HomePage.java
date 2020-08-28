@@ -23,6 +23,12 @@ public class HomePage extends WebAPI {
     public WebElement searchCart;
     @FindBy(how = How.XPATH,using = getWebElementsHomePageLogo)
     public WebElement homePageLogo;
+    @FindBy(how = How.XPATH,using = webElementsClickCollege)
+    public WebElement clickCollege;
+    @FindBy(how = How.XPATH,using = webElementsClickCollegeTitle)
+    public WebElement clickCollegeTitle;
+    @FindBy(how = How.XPATH,using = webElementsClickMens)
+    public WebElement clickMens;
 
 
     //Test-1
@@ -93,5 +99,29 @@ public class HomePage extends WebAPI {
         Assert.assertTrue(driver.findElement(By.xpath("//input[@id='search']")).isDisplayed());
         Thread.sleep(2000);
     }
+    //Action Method
+    public void clickCollegeButton() throws InterruptedException {
+        clickCollege.click();
+        Thread.sleep(3000);
+    }
 
+    //Validate Method
+    public void validateClickCollegeButton() throws InterruptedException {
+        String actualResult =clickCollegeTitle.getText();
+        Thread.sleep(3000);
+        String expectedResult = "College";
+        Assert.assertEquals(actualResult, expectedResult, "Text don't match");
+    }
+    //Action Method
+    public void clickMensButton() throws InterruptedException {
+        clickMens.click();
+        Thread.sleep(3000);
+    }
+    //Validate Method
+    public void validateClickMensButton() throws InterruptedException {
+        String actualResult = "Men's Apparel & Accessories : Target";
+        Thread.sleep(3000);
+        String expectedResult = driver.getTitle();
+        Assert.assertEquals(actualResult, expectedResult, "Text don't match");
+    }
 }

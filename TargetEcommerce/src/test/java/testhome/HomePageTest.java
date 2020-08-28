@@ -37,6 +37,15 @@ public class HomePageTest extends WebAPI {
         homePage.getHomePageLogo();
         homePage.validateGetHomePageLogo();
     }
-
+    @Test
+    public void testClickCollegeButton() throws InterruptedException {
+        homePage.clickCollegeButton();
+        homePage.validateClickCollegeButton();
+    }
+    @Test
+    public void testClickMensButton() throws InterruptedException {
+        homePage.clickMensButton();
+        homePage.validateClickMensButton();
+    }
 
 }

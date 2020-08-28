@@ -8,7 +8,10 @@
     <test name="TargetEcommerce Home">
         <classes>
             <class name="testhome.HomePageTest"></class>
-            <class name="testhome.FindStoresHomePageTest"></class>
+            <class name="findStoreTest.FindStoresHomePageTest"></class>
+            <class name="registryButtonTest.RegistryHomePageTest"></class>
+            <class name="giftCardTest.GiftCardHomePageTest"></class>
+
         </classes>
     </test>
 
