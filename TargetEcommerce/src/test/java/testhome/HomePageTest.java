@@ -37,4 +37,29 @@ public class HomePageTest extends WebAPI {
         homePage.clearanceImage();
         homePage.validateClearanceImage();
     }
+    @Test
+    public void testWeeklyAdClickable(){
+        homePage.weeklyAdClickable();
+    }
+    @Test
+    public void testGiftCardPageLanded(){
+        homePage.giftCardPageLanded();
+        homePage.validateGiftCardPageLanded();
+    }
+    @Test
+    public void testCheckYourBalance() throws InterruptedException {
+        homePage.checkYourBalance();
+        homePage.validateCheckYourBalance();
+    }
+    @Test
+    public void testCheckEmailButton() throws InterruptedException {
+        homePage.checkEmailButton();
+        homePage.validateCheckEmailButton();
+    }
+    @Test
+    public void testcheckMailButton() throws InterruptedException {
+        homePage.checkMailButton();
+        homePage.validateCheckMailButton();
+    }
+
 }

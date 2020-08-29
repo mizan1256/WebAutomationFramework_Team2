@@ -12,6 +12,7 @@
         <module>Generic</module>
         <module>CNN</module>
         <module>TargetEcommerce</module>
+        <module>Geico</module>
     </modules>
 
     <properties>
@@ -144,10 +145,7 @@
         </pluginManagement>
 
     </build>
-<!--    Browser create-->
-<!--    selenium java-->
-<!--    Selenium server-->
-<!--    TestNG-->
+
 
 
 </project>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+
+<suite name="Geico Automation Test" parallel="false">
+    <parameter name="url1" value="https://www.geico.com/"/>
+
+    <test name="Geico Home">
+        <classes>
+            <class name="testgeicohome.GeicoHomePageTest"></class>
+
+        </classes>
+    </test>
+
+
+</suite>

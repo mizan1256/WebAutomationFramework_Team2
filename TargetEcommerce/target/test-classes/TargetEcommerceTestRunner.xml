@@ -7,8 +7,13 @@
 
     <test name="TargetEcommerce Home">
         <classes>
-            <class name="testhome.testHomePage.HomePageTest"></class>
+            <class name="testhome.HomePageTest"></class>
+            <class name="homefunctiontest.HomeFunctionalTest"></class>
+            <class name="readyforschooltest.SchoolHomePageTest"></class>
+            <class name="testkidsactivities.KidsActiviesTest"></class>
+            <class name="testredcard.RedCardPageTest"></class>
             <class name="testRegistry.RegistryHomePageTest"></class>
+
         </classes>
     </test>
 
