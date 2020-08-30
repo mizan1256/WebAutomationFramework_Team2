@@ -25,7 +25,8 @@ public class GiftCardHomePage extends WebAPI {
     @FindBy(how = How.XPATH,using =webElementsVisaPreparedShiptButtonDisplay) public WebElement shiptButtonDisplay ;
     @FindBy(how = How.XPATH,using =webElementsVisaPreparedShiptButtonDisplayText) public WebElement shiptButtonDisplayText ;
     @FindBy(how = How.XPATH,using =webElementsVisaPreparedShiptViewAndCartButton) public WebElement visaPreparedShiptViewAndCartButton ;
-    @FindBy(how = How.XPATH,using =webElementsVisaPreparedShiptViewAndCartButtonText) public WebElement visaPreparedShiptViewAndCartButtontext ;
+    @FindBy(how = How.XPATH,using =webElementsVisaGiftCard) public WebElement visaGiftCard ;
+    @FindBy(how = How.XPATH,using =webElementsVisaGiftCardText) public WebElement visaGiftCardText ;
 
 
     //Test-16
@@ -119,14 +120,32 @@ public class GiftCardHomePage extends WebAPI {
         Thread.sleep(3000);
         Assert.assertEquals(actualResult,expectedResult,"Text don't Exist");
     }
+    //Action Method
+    public void clickViewCart() throws InterruptedException {
+        giftCardButton.click();
+        Thread.sleep(3000);
+        shiptDeal.click();
+        Thread.sleep(3000);
+        addToCart.click();
+        Thread.sleep(3000);
 
+    }
+    public void clickVisaGiftCard() throws InterruptedException {
+        giftCardButton.click();
+        Thread.sleep(3000);
+        shiptDeal.click();
+        Thread.sleep(3000);
+        visaGiftCard.click();
+        Thread.sleep(3000);
 
-//    //Validate method
-//    public void validateClickShiptDealButton() throws InterruptedException {
-//        String actualResult="Shipt Membership Giftcard (Email Delivery)";
-//        Thread.sleep(5000);
-//        String expectedResult=shiptDealText.getText();
-//        Assert.assertEquals(actualResult,expectedResult,"Text don't Exist");
-//    }
+    }
+
+    //Validate method
+    public void validateClickVisaGiftCard() throws InterruptedException {
+        String actualResult="Visa Gift Card - $100 + $6 Fee";
+        Thread.sleep(5000);
+        String expectedResult=visaGiftCardText.getText();
+        Assert.assertEquals(actualResult,expectedResult,"Text don't Exist");
+    }
 
 }

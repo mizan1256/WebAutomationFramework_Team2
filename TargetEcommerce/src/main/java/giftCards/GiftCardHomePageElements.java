@@ -16,4 +16,8 @@ public class GiftCardHomePageElements {
         public static final String webElementsVisaPreparedShiptButtonDisplayText="//h2[@class='Heading__StyledHeading-sc-1m9kw5a-0 hdEoFP h-margin-a-none']";
         public static final String webElementsVisaPreparedShiptViewAndCartButton="//button[@class='Button-bwu3xu-0 gHLRCa']";
         public static final String webElementsVisaPreparedShiptViewAndCartButtonText="//h1[@class='Heading__StyledHeading-sc-1m9kw5a-0 bThsQu h-margin-b-none']";
+        public static final String webElementsVisaGiftCard="//p[contains(text(),'Visa Gift Card - $100 + $6 Fee')]";
+        public static final String webElementsVisaGiftCardText="//span[contains(text(),'Visa Gift Card - $100 + $6 Fee')]";
+
+
 }

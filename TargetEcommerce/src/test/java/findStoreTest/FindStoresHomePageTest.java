@@ -45,5 +45,10 @@ public class FindStoresHomePageTest extends WebAPI {
         findStores.validateCheckZipBox();
 
     }
+    @Test
+    public void testSearchLakeStreetStore() throws InterruptedException {
+        findStores.searchLakeStreetStore();
+        findStores.validateSearchLakeStreetStore();
+    }
 
 }

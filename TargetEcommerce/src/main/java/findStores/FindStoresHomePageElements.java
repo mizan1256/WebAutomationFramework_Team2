@@ -12,5 +12,7 @@ public class FindStoresHomePageElements {
     public static final String webElementsNearbyStore = "//span[contains(text(),'Forest Hills')]";
     public static final String webElementsNearbyStoreHoursText="//h3[contains(text(),'Store hours')]";
     public static final String webElementsZipBox="//button[contains(text(),'enter zip or city, state')]";
+    public static final String webElementsLakeStreetStore="//h3[contains(text(),'Lake Street')]";
+    public static final String webElementsLakeStreetStoreText="//h1[@class='Heading__StyledHeading-sc-1m9kw5a-0 styles__StoreNameHeading-pxu7eq-0 dxkFHY h-margin-b-tiny']";
 
 }

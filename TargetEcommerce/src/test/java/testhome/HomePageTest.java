@@ -1,7 +1,7 @@
 package testhome;
 
 import common.WebAPI;
-import home.HomePage;
+import cnnhome.HomePage;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -46,6 +46,16 @@ public class HomePageTest extends WebAPI {
     public void testClickMensButton() throws InterruptedException {
         homePage.clickMensButton();
         homePage.validateClickMensButton();
+    }
+    @Test
+    public void testClickSameDayDelivery() throws InterruptedException {
+        homePage.clickSameDayDelivery();
+        homePage.validateClickSameDayDelivery();
+    }
+    @Test
+    public void testCheckCreateAccount() throws InterruptedException {
+        homePage.checkCreateAccount();
+        homePage.validateCheckCreateAccount();
     }
 
 }

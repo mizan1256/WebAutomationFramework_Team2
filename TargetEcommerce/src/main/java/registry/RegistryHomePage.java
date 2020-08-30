@@ -29,7 +29,10 @@ public class RegistryHomePage extends WebAPI {
     public WebElement signInPage;
     @FindBy(how = How.XPATH, using = webElementsFindList)
     public WebElement findList;
-
+    @FindBy(how = How.XPATH, using = webElementsReadyForSchool)
+    public WebElement readyForSchool;
+    @FindBy(how = How.XPATH, using = webElementsReadyForSchoolText)
+    public WebElement readyForSchoolText;
 
     //Test-11
     //Action Method
@@ -121,27 +124,35 @@ public class RegistryHomePage extends WebAPI {
         findList.click();
         Thread.sleep(3000);
     }
+
     //Validate Method
-    public void validateCheckFindList( )throws InterruptedException {
+    public void validateCheckFindList() throws InterruptedException {
         String actualResult = "School List Assist : Target";
         Thread.sleep(3000);
         String expectedResult = driver.getTitle();
         Assert.assertEquals(actualResult, expectedResult, "Text don't match");
     }
+
+    //Action Method
+    public void checkReadyForSchool() throws InterruptedException {
+        registryButton.click();
+        Thread.sleep(3000);
+        findList.click();
+        Thread.sleep(3000);
+        readyForSchool.click();
+        Thread.sleep(3000);
+    }
+    //Validate method
+    public void validateCheckReadyForSchool() throws InterruptedException {
+        String actualResult = "Ready for School";
+        Thread.sleep(4000);
+        String expectedResult = readyForSchoolText.getText();
+        Assert.assertEquals(actualResult, expectedResult, "Not Exist");
+
+    }
+
 }
 
 
 
 
-//    //Test-6
-//    //Action Method
-//    public void searchFindStores(){
-//        findStoresSearch.click();
-//    }
-//    //Validate method
-//    public void validateSearchFindStores() throws InterruptedException {
-//        String actualResult=findStoresText.getText();
-//        Thread.sleep(5000);
-//        String expectedResult="Find a store";
-//        Assert.assertEquals(actualResult,expectedResult,"not match");
-//    }

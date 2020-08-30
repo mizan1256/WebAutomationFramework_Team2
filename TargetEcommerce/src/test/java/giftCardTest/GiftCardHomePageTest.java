@@ -42,4 +42,11 @@ public class GiftCardHomePageTest extends WebAPI {
         giftCard.clickAddToCart();
         giftCard.validateClickAddToCart();
     }
+
+    @Test
+    public void testClickVisaGiftCard() throws InterruptedException {
+        giftCard.clickVisaGiftCard();
+        giftCard.validateClickVisaGiftCard();
+    }
+
 }

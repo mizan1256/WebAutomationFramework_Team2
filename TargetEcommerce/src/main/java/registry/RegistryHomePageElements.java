@@ -10,5 +10,9 @@ public class RegistryHomePageElements {
     public static final String webElementsRegistrySignInButton="//span[contains(text(),'Sign in')]";
     public static final String webElementsRegistrySignInPage="//h2[@class='sc-hMqMXs sc-esjQYD eXTUDl']";
     public static final String webElementsFindList="//button[contains(text(),'find class list')]";
+    public static final String webElementsReadyForSchool="//span[contains(text(),'Ready for School')]";
+    public static final String webElementsReadyForSchoolText="//h1[@class='Heading__StyledHeading-sc-1m9kw5a-0 jAsGMN h-margin-b-none']";
+
+
 
 }

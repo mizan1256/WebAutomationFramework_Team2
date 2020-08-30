@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+
+<suite name="Cnn Automation Test" parallel="false">
+    <parameter name="url" value="https://www.cnn.com/"/>
+
+    <test name="Cnn Home">
+        <classes>
+            <class name="testCnnHome.CnnHomePageTest"></class>
+            <class name="testRegistrationPage.TestRegistraionPage"></class>
+
+        </classes>
+    </test>
+
+
+</suite>

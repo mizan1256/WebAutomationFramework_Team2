@@ -46,6 +46,11 @@ public class RegistryHomePageTest extends WebAPI {
         registry.checkFindList();
         registry.validateCheckFindList();
 
+    }
+    @Test
+    public void testCheckReadyForSchool() throws InterruptedException {
+        registry.checkReadyForSchool();
+        registry.validateCheckReadyForSchool();
 
     }
 }

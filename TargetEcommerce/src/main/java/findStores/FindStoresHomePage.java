@@ -21,6 +21,8 @@ public class FindStoresHomePage extends WebAPI {
     @FindBy(how = How.XPATH,using = webElementsNearbyStore) public WebElement nearbyStore;
     @FindBy(how = How.XPATH,using = webElementsNearbyStoreHoursText) public WebElement nearbyStoreHoursText;
     @FindBy(how = How.XPATH,using = webElementsZipBox) public WebElement zipBox;
+    @FindBy(how = How.XPATH,using = webElementsLakeStreetStore) public WebElement lakeStreetStore;
+    @FindBy(how = How.XPATH,using = webElementsLakeStreetStoreText) public WebElement lakeStreetStoreText;
 
     //Test-6
     //Action Method
@@ -108,5 +110,19 @@ public class FindStoresHomePage extends WebAPI {
         Thread.sleep(3000);
         String expectedResult = driver.getTitle();
         Assert.assertEquals(actualResult, expectedResult, "Text don't match");
+    }
+
+    public void searchLakeStreetStore() throws InterruptedException {
+        Thread.sleep(5000);
+        findStoresSearch.click();
+        Thread.sleep(5000);
+        lakeStreetStore.click();
+        Thread.sleep(3000);
+    }
+    public void validateSearchLakeStreetStore() throws InterruptedException {
+        String actualResult=lakeStreetStoreText.getText();
+        Thread.sleep(5000);
+        String expectedResult="Lake Street";
+        Assert.assertEquals(actualResult,expectedResult,"not match");
     }
 }

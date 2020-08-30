@@ -1,4 +1,4 @@
-package home;
+package cnnhome;
 
 import common.WebAPI;
 import org.openqa.selenium.By;
@@ -6,7 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.testng.Assert;
-import static home.HomePageWEbElements.*;
+import static cnnhome.HomePageWEbElements.*;
 
 
 public class HomePage extends WebAPI {
@@ -19,16 +19,51 @@ public class HomePage extends WebAPI {
     /***/
     @FindBy(how = How.CLASS_NAME, using = getWebElementsSearchNewArrivalTextClass)
     public WebElement searchNewArrival;
+
     @FindBy(how = How.XPATH,using = checkWebElementsCartButton)
     public WebElement searchCart;
+
     @FindBy(how = How.XPATH,using = getWebElementsHomePageLogo)
     public WebElement homePageLogo;
+
     @FindBy(how = How.XPATH,using = webElementsClickCollege)
     public WebElement clickCollege;
+
     @FindBy(how = How.XPATH,using = webElementsClickCollegeTitle)
     public WebElement clickCollegeTitle;
+
     @FindBy(how = How.XPATH,using = webElementsClickMens)
     public WebElement clickMens;
+
+    @FindBy(how = How.XPATH,using = webElementsClickSameDayDelivery)
+    public WebElement sameDayDelivery;
+
+    @FindBy(how = How.XPATH,using = webElementsClickSameDayDeliveryText)
+    public WebElement sameDayDeliveryText;
+
+    @FindBy(how = How.XPATH,using = webElementsSignInButton)
+    public WebElement signInButton;
+
+    @FindBy(how = How.XPATH,using = webElementsCreateAccountButton)
+    public WebElement createAccountButton;
+
+    @FindBy(how = How.XPATH,using = webElementsUserEmailId)
+    public WebElement userEmailId;
+
+    @FindBy(how = How.XPATH,using = webElementsUserFirstName)
+    public WebElement userFirstName;
+
+    @FindBy(how = How.XPATH,using = webElementsUserLastName)
+    public WebElement userLastName;
+
+    @FindBy(how = How.XPATH,using = webElementsUserMobileNumber)
+    public WebElement userMobileNumber;
+
+    @FindBy(how = How.XPATH,using = webElementsUserPasWord)
+    public WebElement userPassword;
+
+    @FindBy(how = How.XPATH,using = webElementsCreateAccountBox)
+    public WebElement createAccountBox;
 
 
     //Test-1
@@ -124,4 +159,39 @@ public class HomePage extends WebAPI {
         String expectedResult = driver.getTitle();
         Assert.assertEquals(actualResult, expectedResult, "Text don't match");
     }
+    //Action Method
+    public void clickSameDayDelivery() throws InterruptedException {
+        sameDayDelivery.click();
+        Thread.sleep(3000);
+    }
+
+    //Validate Method
+    public void validateClickSameDayDelivery() throws InterruptedException {
+        String actualResult =sameDayDeliveryText.getText();
+        Thread.sleep(3000);
+        String expectedResult = "Get it as soon as today";
+        Assert.assertEquals(actualResult, expectedResult, "Text don't match");
+    }
+    //Action Method
+    public void checkCreateAccount() throws InterruptedException {
+        signInButton.click();
+        Thread.sleep(3000);
+        createAccountButton.click();
+        userEmailId.sendKeys("pntitny@gmail.com");
+        userFirstName.sendKeys("PNT");
+        userLastName.sendKeys("IT");
+        userMobileNumber.sendKeys("6464314010");
+        userPassword.sendKeys("p1234567");
+        createAccountBox.click();
+        Thread.sleep(3000);
+    }
+    //Validate Method
+    public void validateCheckCreateAccount() throws InterruptedException {
+        String actualResult = "Target Login";
+        Thread.sleep(3000);
+        String expectedResult = driver.getTitle();
+        Assert.assertEquals(actualResult, expectedResult, "Text don't match");
+    }
+
+
 }
