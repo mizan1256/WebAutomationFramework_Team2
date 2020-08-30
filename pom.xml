@@ -10,8 +10,9 @@
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>Generic</module>
-        <module>CNN</module>
+
         <module>TargetEcommerce</module>
+<!--        <module></module>-->
 
     </modules>
 
@@ -137,9 +138,9 @@
                     <configuration>
                         <testFailureIgnore>true</testFailureIgnore>
                         <suiteXmlFiles>
-                            <suiteXmlFile></suiteXmlFile>
-                            <suiteXmlFile></suiteXmlFile>
-                            <suiteXmlFile></suiteXmlFile>
+                            <suiteXmlFile>target/test-classes/TargetEcommerceTestRunner.xml</suiteXmlFile>
+<!--                            <suiteXmlFile>target/test-classes/CNNTestRunner.xml</suiteXmlFile>-->
+<!--                            <suiteXmlFile></suiteXmlFile>-->
                         </suiteXmlFiles>
                     </configuration>
                 </plugin>
