@@ -1,7 +1,7 @@
 package testhome;
 
 import common.WebAPI;
-import home.HomePage;
+import cnnhome.HomePage;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -65,6 +65,31 @@ public class HomePageTest extends WebAPI {
     public void testing_ValidateCreateAccountMethod_NegativeTest() throws InterruptedException {
         myHomePage.createAccountMethod_NegativeTest();
         myHomePage.validateCreateAccountMethod_NegativeTest();
+    }
+    @Test//#28
+    public void testing_Validate_whatsNewText() throws InterruptedException {
+        myHomePage.whatsNewText();
+        myHomePage.validate_whatsNewText();
+    }
+    @Test//#29
+    public void testing_ValidateNewInWomen() throws InterruptedException {
+        myHomePage.newInWomen();
+        myHomePage.validateNewInWomen();
+    }
+    @Test//#30
+    public void testing_Validate_Deals1() throws InterruptedException {
+        myHomePage.deals1();
+        myHomePage.validate_Deals1();
+    }
+    @Test//#31
+    public void testing_Validate_clearanceText() throws InterruptedException {
+        myHomePage.deals1();
+        myHomePage.validate_clearanceText();
+    }
+    @Test//#32
+    public void testing_Validate_more() throws InterruptedException {
+        myHomePage.more();
+        myHomePage.validate_more();
     }
 
 

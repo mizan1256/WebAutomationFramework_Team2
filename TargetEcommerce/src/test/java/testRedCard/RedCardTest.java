@@ -1,14 +1,22 @@
 package testRedCard;
 
 import common.WebAPI;
+import org.openqa.selenium.support.PageFactory;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import redCard.RedCardPage;
 
 public class RedCardTest extends WebAPI {
 
     RedCardPage myRedCard;
+
+    @BeforeMethod
+    public void getInIt(){
+        myRedCard= PageFactory.initElements(driver, RedCardPage.class);
+    }
+
     @Test//16
-    public void testing_RedCardForm() throws InterruptedException {
+    public void testing_RedCardText() throws InterruptedException {
         myRedCard.redCardText();
         myRedCard.validate_RedCardText();
     }

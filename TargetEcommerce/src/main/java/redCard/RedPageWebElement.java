@@ -2,7 +2,7 @@ package redCard;
 
 public class RedPageWebElement {
 
-    public static final String redCardText="//a[@class='Link-sc-1khjl8b-0 kPdxNk'][contains(text(),'Find Stores')]";// xpath.// .16
+    public static final String redCardText="//a[@class='Link-sc-1khjl8b-0 kPdxNk'][contains(text(),'RedCard')]";// xpath.// .16
     public static final String expectedRedCardText="//span[@class='NavHeader__TrademarkText-sc-1t30nzk-1 ksyEnu h-text-xs h-text-red']";//xpath..16
 
     public static final String exclusiveText="//a[@class='Link-sc-1khjl8b-0 bTKAgl'][contains(text(),'Exclusives')]";// xpath.// .17

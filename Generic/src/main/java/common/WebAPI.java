@@ -17,14 +17,15 @@ public class WebAPI {
     @Parameters({"url"})
 
     @BeforeMethod
-    public void setUp(@Optional("https://www.target.com") String url) {
+    public void setUp(@Optional("https://www.cnn.com") String url) {
         System.setProperty("webdriver.chrome.driver", "../Generic/BrowserDriver/windows/chromedriver.exe");
         //System.setProperty("webdriver.chrome.driver", "../Generic/BrowserDriver/mac/chromedriver");
         driver = new ChromeDriver();
         driver.get(url);
-        driver.manage().window().maximize();
         driver.manage().timeouts().pageLoadTimeout(15, TimeUnit.SECONDS );
+        driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
+
     }
 
     @AfterMethod(alwaysRun = true)

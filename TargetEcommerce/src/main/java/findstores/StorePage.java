@@ -44,7 +44,6 @@ public class StorePage extends WebAPI {
     }
     public void validateSetLakeStreet() throws InterruptedException {
         String actualResult="Weekly Ad";
-        Thread.sleep(3000);
         String expectedResult=expectedWeekly.getText();
         Assert.assertEquals(actualResult,expectedResult);
         Thread.sleep(3000);
@@ -108,7 +107,6 @@ public class StorePage extends WebAPI {
     }
     public void validateSeeOfferDetailText() throws InterruptedException {//15
         String actualResult= "What would you like to do";
-        Thread.sleep(4000);
         String expectedResult= expectedOffer.getText();
         Assert.assertEquals(actualResult,expectedResult);
         Thread.sleep(3000);

@@ -10,6 +10,7 @@
             <class name="testhome.HomePageTest"></class>
             <class name="testfindstore.StorePageTest"></class>
             <class name="testRedCard.RedCardTest"></class>
+            <class name="testRegistry.RegistryHomePageTest"></class>
 
 <!--            <class name="testhome.RegistrationPageTest"></class>-->
         </classes>

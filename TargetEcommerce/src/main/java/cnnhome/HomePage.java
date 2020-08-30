@@ -1,18 +1,12 @@
-package home;
+package cnnhome;
 
 import common.WebAPI;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindAll;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
-import org.openqa.selenium.support.ui.Select;
-import org.openqa.selenium.support.ui.Sleeper;
 import org.testng.Assert;
 
-import java.sql.SQLOutput;
-
-import static home.HomePageWebElement.*;
+import static cnnhome.HomePageWebElement.*;
 
 public class HomePage extends WebAPI {
     @FindBy(how = How.XPATH, using = searchBoxByXpath)
@@ -27,12 +21,6 @@ public class HomePage extends WebAPI {
     @FindBy(how = How.XPATH, using = searchForProductByXpath_Actual)
     public WebElement actualText;
 
-    @FindBy(how = How.XPATH, using = dealsTargetHomePageByXpath)//4
-    public WebElement deals;
-
-    @FindBy(how = How.XPATH, using = dealsTarget_TopDealsByXpath)//4
-    public WebElement topDeals;
-
     @FindBy(how = How.XPATH, using = sameDayDeliveryTargetByXpath)//5
     public WebElement sameDayDelivery;
 
@@ -45,8 +33,6 @@ public class HomePage extends WebAPI {
     @FindBy(how = How.XPATH, using = expected_helpByXpath)//7
     public WebElement expected;
 
-    @FindBy(how = How.XPATH, using = expected_topDealText)//7
-    public WebElement expected_topDeal;
 
 
     ////////////////////////////////////////////
@@ -82,9 +68,18 @@ public class HomePage extends WebAPI {
         Assert.assertEquals("Same Day Delivery : Target", driver.getTitle());
         Thread.sleep(2000);
     }
-//////////////////////////////////////////////////
+//////////////////////////////////////////////////4
+    @FindBy(how = How.XPATH, using = dealsTargetHomePageByXpath)//4
+    public WebElement deals;
 
-    public void dealsTarget() throws InterruptedException {// case # 4-unfinished
+    @FindBy(how = How.XPATH, using = dealsTarget_TopDealsByXpath)//4
+    public WebElement topDeals;
+
+    @FindBy(how = How.XPATH, using = expected_topDealText)//7
+    public WebElement expected_topDeal;
+
+
+    public void dealsTarget() throws InterruptedException {// case # 4
         deals.click();
         Thread.sleep(5000);
         topDeals.click();
@@ -214,6 +209,7 @@ public class HomePage extends WebAPI {
 
     public void validateCreateAccountMethod() throws InterruptedException {//.........10
         String actualResult="Verify mobile phone";
+        Thread.sleep(3000);
         String expectedResult=verifyPage.getText();
         Assert.assertEquals(actualResult,expectedResult);
         Thread.sleep(3000);
@@ -258,7 +254,117 @@ public WebElement errorMessage;
         Assert.assertEquals(actualResult,expectedResult);
         Thread.sleep(3000);
     }
-    ////////////////////////////////////////
+    ////////////////////////////////////////28
+
+    @FindBy(how = How.XPATH, using = whatsNewText)//28
+    public WebElement whatsNew;
+
+    @FindBy(how = How.XPATH, using = newInBeautyText)//28
+    public WebElement newInBeauty;
+
+    @FindBy(how = How.XPATH, using = expectedNIBText)//27
+    public WebElement expected_newInBeauty;
+
+    public void whatsNewText() throws InterruptedException {// case # 28
+        whatsNew.click();
+        Thread.sleep(5000);
+        newInBeauty.click();
+        Thread.sleep(5000);
+    }
+
+    public void validate_whatsNewText() {
+        String actualTopDeal = "New in Beauty";
+        Assert.assertEquals(actualTopDeal, expected_newInBeauty.getText());
+    }
+////////////////////////////////////////29
+
+//    @FindBy(how = How.XPATH, using = whatsNewText)//29
+//    public WebElement whatsNew;
+
+    @FindBy(how = How.XPATH, using = newInWomenText)//29
+    public WebElement newInWomen;
+
+    @FindBy(how = How.XPATH, using = expectedNIWomText)//29
+    public WebElement expectedNWom;
+
+    public void newInWomen() throws InterruptedException {// case # 30
+        whatsNew.click();
+        Thread.sleep(5000);
+        newInWomen.click();
+        Thread.sleep(5000);
+    }
+
+    public void validateNewInWomen() {
+        String actualTopDeal = "New Arrivals";
+        Assert.assertEquals(actualTopDeal, expectedNWom.getText());
+    }
+    ////////////////////////////////////////30
+
+    @FindBy(how = How.XPATH, using = dealsText)//30
+    public WebElement deals1;
+
+    @FindBy(how = How.XPATH, using = targetCircleOfferText)//30
+    public WebElement targetCircleOff;
+
+    @FindBy(how = How.XPATH, using = expectedTargetCircleOfferText)//30
+    public WebElement expectedTargetCircle;
+
+    public void deals1() throws InterruptedException {// case # 30
+        deals1.click();
+        Thread.sleep(5000);
+        targetCircleOff.click();
+        Thread.sleep(5000);
+    }
+
+    public void validate_Deals1() {
+        String actualTopDeal = "Offers by category";
+        Assert.assertEquals(actualTopDeal, expectedTargetCircle.getText());
+    }
+    ////////////////////////////////////////31
+
+//    @FindBy(how = How.XPATH, using = dealsText)//31
+//    public WebElement deals1;
+
+    @FindBy(how = How.XPATH, using = clearanceText)//31
+    public WebElement clearance;
+
+    @FindBy(how = How.XPATH, using = expectedClearanceText)//31
+    public WebElement expectedClearance;
+
+    public void clearanceText() throws InterruptedException {// case # 31
+        deals1.click();
+        Thread.sleep(5000);
+        clearance.click();
+        Thread.sleep(5000);
+    }
+
+    public void validate_clearanceText() {
+        String actualTopDeal = "Clearance";
+        Assert.assertEquals(actualTopDeal, expectedClearance.getText());
+    }
+    ////////////////////////////////////////32
+
+    @FindBy(how = How.XPATH, using = moreText)//32
+    public WebElement more;
+
+    @FindBy(how = How.XPATH, using = pharmacyText)//32
+    public WebElement pharmacy;
+
+    @FindBy(how = How.XPATH, using = expectedPharmacyText)//32
+    public WebElement expectedPharmacy;
+
+    public void more() throws InterruptedException {// case # 32
+        more.click();
+        Thread.sleep(5000);
+        pharmacy.click();
+        Thread.sleep(5000);
+    }
+
+    public void validate_more() {
+        String actualTopDeal = "Pharmacy";
+        Assert.assertEquals(actualTopDeal, expectedPharmacy.getText());
+    }
+
 
 }
 

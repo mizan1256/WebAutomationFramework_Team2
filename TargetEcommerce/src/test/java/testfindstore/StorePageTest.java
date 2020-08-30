@@ -2,7 +2,6 @@ package testfindstore;
 
 import common.WebAPI;
 import findstores.StorePage;
-import home.HomePage;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;

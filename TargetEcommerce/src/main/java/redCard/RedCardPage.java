@@ -12,16 +12,16 @@ public class RedCardPage extends WebAPI {
 
     @FindBy(how = How.XPATH, using= redCardText)//.16
     public WebElement redCard;
-    @FindBy(how = How.XPATH, using= expectedRedCardText)//.16
-    public WebElement expectedRCard;
+//    @FindBy(how = How.XPATH, using= expectedRedCardText)//.16
+//    public WebElement expectedRCard;
 
     public void redCardText() throws InterruptedException {// case # 16
         Thread.sleep(3000);
         redCard.click();
     }
     public void validate_RedCardText() throws InterruptedException {
-        String actualResult="TM";
-        String expectedResult= expectedRCard.getText();
+        String actualResult="RedCard : Save 5% at Target";
+        String expectedResult= driver.getTitle();
         Assert.assertEquals(actualResult,expectedResult);
         Thread.sleep(3000);
     }
@@ -38,7 +38,7 @@ public class RedCardPage extends WebAPI {
         exclusive.click();
     }
     public void validate_ExclusiveText() throws InterruptedException {
-        String actualResult="RedCard Exclusive";
+        String actualResult="RedCard Exclusives";
         String expectedResult= expectedExclusive.getText();
         Assert.assertEquals(actualResult,expectedResult);
         Thread.sleep(3000);
@@ -78,7 +78,7 @@ public class RedCardPage extends WebAPI {
         targetLogo.click();
     }
     public void validate_programRuleText() throws InterruptedException {
-        String actualResult="Target : Expect More. Pay Less.";
+        String actualResult="RedCard : Save 5% at Target";
         String expectedResult= driver.getTitle();
         Assert.assertEquals(actualResult,expectedResult);
         Thread.sleep(3000);
