@@ -16,7 +16,7 @@ public class CnnHomePageTest extends WebAPI {
     }
 
 
-    @Test//#32
+    @Test//#33
     public void testing_validate_Us() throws InterruptedException {
         myCnnHomePage.us();
         myCnnHomePage.validate_Us();

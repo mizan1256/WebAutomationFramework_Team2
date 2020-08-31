@@ -12,14 +12,14 @@ import static home.CnnHomePageWebElement.expectedUsText;
 public class CnnHomePage extends WebAPI {
 
 
-    @FindBy(how = How.XPATH, using = UsText)//4
+    @FindBy(how = How.XPATH, using = UsText)//33
     public WebElement us;
 
-    @FindBy(how = How.XPATH, using = expectedUsText)//4
+    @FindBy(how = How.XPATH, using = expectedUsText)//33
     public WebElement expectedUs;
 
 
-    public void us() throws InterruptedException {// case # 4
+    public void us() throws InterruptedException {// case # 33
         us.click();
         Thread.sleep(2000);
 
