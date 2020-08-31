@@ -1,7 +1,7 @@
 package testhome;
 
 import common.WebAPI;
-import cnnhome.HomePage;
+import home.HomePage;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;

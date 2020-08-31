@@ -1,4 +1,4 @@
-package cnnhome;
+package home;
 
 import common.WebAPI;
 import org.openqa.selenium.WebElement;
@@ -6,10 +6,10 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.testng.Assert;
 
-import static cnnhome.HomePageWebElement.*;
+import static home.HomePageWebElement.*;
 
 public class HomePage extends WebAPI {
-    @FindBy(how = How.XPATH, using = searchBoxByXpath)
+    @FindBy(how = How.XPATH, using = searchBoxByXpath)//...1
     public WebElement searchBox;
 
     @FindBy(how = How.XPATH, using = searchLogoButtonByXpath)

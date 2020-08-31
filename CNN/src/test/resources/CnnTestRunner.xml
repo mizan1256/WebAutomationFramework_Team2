@@ -7,7 +7,7 @@
 
     <test name="CNN Home">
         <classes>
-            <class name="cnnhometest.HomePageTest"></class>
+            <class name="cnnhometest.CnnHomePageTest"></class>
 
 
             <!--            <class name="testhome.RegistrationPageTest"></class>-->
